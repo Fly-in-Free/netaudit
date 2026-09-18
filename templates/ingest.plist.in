@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0"><dict>
+  <key>Label</key><string>@PREFIX@.ingest</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>@BASE@/app/Net Audit Ingest.app/Contents/MacOS/NetAuditIngest</string>
+  </array>
+  <key>StartInterval</key><integer>@INGEST_INTERVAL@</integer>
+  <key>RunAtLoad</key><true/>
+  <key>StandardOutPath</key><string>@BASE@/logs/pipeline.log</string>
+  <key>StandardErrorPath</key><string>@BASE@/logs/pipeline.err</string>
+</dict></plist>

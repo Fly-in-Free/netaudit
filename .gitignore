@@ -1,0 +1,18 @@
+# ===== 运行时数据：绝对不要提交 =====
+# 这些是真实的网络抓包和你机器的使用记录
+pcap/
+db/
+reports/
+logs/
+rustnet/
+staging/
+app/
+build/
+
+# ===== 由 install.sh 生成 =====
+*.pyc
+__pycache__/
+
+# ===== macOS =====
+.DS_Store
+._*
