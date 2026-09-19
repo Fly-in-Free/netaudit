@@ -14,7 +14,7 @@ set -euo pipefail
 REPO="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 PREFIX="${LABEL_PREFIX:-local.netaudit}"
-INGEST_INTERVAL="${INGEST_INTERVAL:-7200}"   # 每 2 小时入库一次
+INGEST_INTERVAL="${INGEST_INTERVAL:-1800}"   # 每 30 分钟检查一次（睡眠时不触发，只利用醒着窗口）
 DAILY_HOUR="${DAILY_HOUR:-9}"                # 每天 9 点出日报
 SYSTEM_DIR="${SYSTEM_DIR:-/Library/Application Support/NetAudit}"
 SYSTEM_PLIST_DIR="/Library/LaunchDaemons"

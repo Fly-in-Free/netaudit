@@ -488,8 +488,9 @@ if __name__ == "__main__":
     elif action == "report":
         cmd_report()
     elif action == "daily":
-        # 每日任务：字节量 + 日报。ingest 由更频繁的独立任务负责
-        cmd_bytes(); cmd_report()
+        # 每日任务：先入库（兜底 StartInterval 因睡眠错过的窗口，保证报告数据完整），
+        # 再出字节量 + 日报。
+        cmd_ingest(); cmd_bytes(); cmd_report()
     elif action == "all":
         cmd_ingest(); cmd_bytes(); cmd_report()
     else:
